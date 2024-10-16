@@ -1,0 +1,85 @@
+#
+# 스프링 프로파일 그룹화
+#
+spring:
+  profiles:
+    group:
+      dev: common, dev
+
+
+
+---
+
+#
+# 공통 환경 설정
+#
+spring:
+  config:
+    activate:
+      on-profile:
+        - common
+  # 스프링부트 애플리케이션 명칭
+  application:
+    name: collab-v1
+  main:
+    # 서버 런타임시, 콘솔상에 출력되는 배너 끄기
+    banner-mode: OFF
+  # 웹 브라우저의 새로고침을 통해 변경된 화면 적용을 위한 경로 변경 및 캐시 값 설정
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    cache: false
+  # 웹 브라우저의 새로고침을 통해 변경된 화면 적용을 위한 정적 자원 파일의 경로 변경
+  web:
+    resources:
+      static-locations:
+        - file:src/main/resources/static/
+
+mybatis:
+  # 런타임시 마이바티스의 동작 제어를 위한 값 설정
+  configuration:
+    cache-enabled: false
+    lazy-loading-enabled: false
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+    jdbc-type-for-null: NULL
+    local-cache-scope: STATEMENT
+  # 마이바티스에서 타입 정보 사용시, 명시할 패키지 이름을 생략하기 위한 설정
+  type-aliases-package: com.tnbin.collab.domain.**.dto
+  # 매퍼 XML 파일 경로 지정
+  mapper-locations:
+    - classpath:mapper/*_mapper.xml
+    - classpath:mapper/**/*_mapper.xml
+
+server:
+  port: 80  # 내장 톰캣 서버 포트 번호 변경
+  servlet:
+    # HTTP 요청 및 응답의 인코딩 설정
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+
+---
+
+#
+# 로컬 개발 환경 설정
+#
+spring:
+  config:
+    activate:
+      on-profile:
+        - dev
+  # 데이터베이스 연결 정보 설정 - 데이터소스 설정
+  datasource:
+    url: jdbc:mariadb://localhost:3306/collab?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: kyubo
+    password: tn3718
+    driver-class-name: org.mariadb.jdbc.Driver
+
+# 로깅 레벨 설정
+logging:
+  level:
+    root: info
+    web: debug
