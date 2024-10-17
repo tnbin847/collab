@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /**
- * 설명
+ * 사이트 내에서 전반적으로 자주 사용되는 속성에 대한 스타일 정읜
  * 
  * @author      박 수 빈
  * @version     1.0
@@ -9,183 +9,255 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  01. 사용자 지정 속성
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+:root {
+    /* # 색상 */
+    --primary-color: #3256A5;
+    --secondary-color: #464656;
+    --success-color: #18B57A;
+    --warning-color: #FCBF66;
+    --danger-color: #E15F68;
+    --link-color: #3FA1FB;
+    --text-color: #24262C;
+    --border-color: #CDD8DF;
+    --dark-color: #2E3648;
+    --light-color: #F7FAFC;
+
+    --background-color: #FAFBFD;
+
+    --white: #FFFFFF;
+    --gray: #60626B;
+    --black: #0E0E0E;
+
+
+    /* # 간격 */
+    --spacing-xxxs: 4px;
+    --spacing-xxs: 8px;
+    --spacing-xs: 12px;
+    --spacing-sm: 16px;
+    --spacing-md: 20px;
+    --spacing-lg: 24px;
+    --spacing-xl: 28px;
+    --spacing-xxl: 32px;
+    --spacing-xxxl: 36px;
+
+
+    /* # 텍스트 */
+    --text-base: 13px;
+    --text-sm: 12px;
+    --text-md: 16px;
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-xxl: 28px;
+
+
+    /* # 아이콘 */
+    --icon-base: 12px;
+    --icon-sm: 10px;
+    --icon-md: 14px;
+    --icon-lg: 18px;
+    --icon-xl: 22px;
+
+
+    /* # 컴포넌트 */
+    --border-radius: 2.5px;
+    --contain-intrinsic-height: 24px;
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  02. 텍스트
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ============================================================
+    02-1. 글꼴
+============================================================ */ 
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
+         url('/fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Medium.woff2') format('woff2'),
+         url('/fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Montserrat-Black';
+	font-weight: 900;
+	font-display: swap;
+	src: url('/fonts/Montserrat-Black.woff2') format('woff2'),
+         url('/fonts/Montserrat-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GmarketSans-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/GmarketSans-Medium.woff2') format('woff2'),
+         url('/fonts/GmarketSans-Medium.woff') format('woff');
+}
+
+
+/* ============================================================
+    02-2. 공통
+============================================================ */ 
+* {
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-size: var(--text-base);
+    font-weight: 600;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================================================
+    02-3. 입력 안내 문구
+============================================================ */ 
+.help {
+    margin-bottom: var(--spacing-xxxs);
+    color: var(--gray);
+    font-size: var(--text-sm);
+}
+
+
+/* ============================================================
+    02-4. 텍스트 링크
+============================================================ */ 
+.has-link {
+    text-align: center;
+    color: var(--gray);
+
+    /* # 내부 <a> 태그 스타일 정의 */
+    & > a[role='link'] {
+        margin: 0 var(--spacing-xs);
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+
+/* ============================================================
+    02-5. 색상별 텍스트 스타일 정의
+============================================================ */ 
+.is-text-primary {
+    color: var(--primary-color);
+}
+
+.is-text-secondary {
+    color: var(--secondary-color);
+}
+
+.is-text-link {
+    color: var(--link-color);
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  03. 플렉스 
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ============================================================
+    03-1. 수평 정렬
+============================================================ */ 
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &.is-align-midst {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.is-align-left {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &.is-align-center {
+        justify-content: center;
+    }
+
+    &.is-align-right {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &.is-align-space-between {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/* ============================================================
+    03-2. 수직 정렬
+============================================================ */ 
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &.is-align-midst {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.is-align-top {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &.is-align-center {
+        align-items: center;
+    }
+
+    &.is-align-bottom {
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  04. 박스
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.box {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+
+    &.is-round-padded {
+        padding: var(--spacing-xxs);
+        border-radius: var(--border-radius);
+    }
+}
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  05. 디스플레이
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
