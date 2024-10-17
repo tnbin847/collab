@@ -28,7 +28,7 @@
     --background-color: #FAFBFD;
 
     --white: #FFFFFF;
-    --gray: #60626B;
+    --gray: #6B6E78;
     --black: #0E0E0E;
 
 
@@ -63,7 +63,7 @@
 
     /* # 컴포넌트 */
     --border-radius: 2.5px;
-    --contain-intrinsic-height: 24px;
+    --contain-intrinsic-height: 26px;
 }
 
 

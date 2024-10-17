@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/**
+ * 로그인 페이지 전용 CSS
+ * 
+ * @author      박 수 빈
+ * @version     1.0
+ */
+
+
+
+#contents:has(#loginForm) {
+    width: 350px;
+}
+
+
+/* # 로그인 페이지 유효성 메시지 영역 스타일 지정 */
+.field .is-grouped > small {
+    margin-top: var(--spacing-xxxs);
+    font-size: var(--text-sm);
+}
