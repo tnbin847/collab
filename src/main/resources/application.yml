@@ -46,6 +46,8 @@ mybatis:
     local-cache-scope: STATEMENT
   # 마이바티스에서 타입 정보 사용시, 명시할 패키지 이름을 생략하기 위한 설정
   type-aliases-package: com.tnbin.collab.domain.**.dto
+  # 타입 핸들러 등록
+  type-handlers-package: com.tnbin.collab.global.common.mybatis
   # 매퍼 XML 파일 경로 지정
   mapper-locations:
     - classpath:mapper/*_mapper.xml
