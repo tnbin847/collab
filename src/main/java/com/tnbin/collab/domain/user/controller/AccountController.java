@@ -1,5 +1,6 @@
 package com.tnbin.collab.domain.user.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
  */
 
 @RestController
+@RequiredArgsConstructor
 public class AccountController {
-
     /**
      * 회원가입 페이지 호출
      */
@@ -19,4 +20,5 @@ public class AccountController {
     public ModelAndView signup() {
         return new ModelAndView("collab/user/signup");
     }
+
 }
