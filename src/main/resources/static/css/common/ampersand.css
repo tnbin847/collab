@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/*
+ * 나만의 공통 CSS
+ *
+ * @author     박 수 빈
+ * @version    1.0
+ */ 
+
+
+
+/*
+ * 1. 사용자 정의 속성(CUSTOM CSS PROPERTIES)
+================================================================================================*/
+:root {
+    /* 1-1. 색상 코드 (COLOR) */
+    --primary-color: #;
+    --secondary-color: #;
+    --success-color: #;
+    --warning-color: #;
+    --danger-color: #;
+    --highlight-color: #;
+    --light-color: #;
+    --dark-color: #;
+    --border-color: #;
+    --disabled-color: #;
+
+    --white: #FFFFFF;
+    --gray: #;
+    --black: #;
+
+
+    /* 1-2. 간격 (SPACING) */
+    --space-base: 4px;
+    --space-xxxs: 2px;
+    --space-xxs: 6px;
+    --space-xs: 10px;
+    --space-sm: 14px;
+    --space-md: 18px;
+    --space-lg: 22px;
+    --space-xl: 26px;
+    --space-xxl: 30px;
+    --space-xxxl: 34px;
+
+
+    /* 1-3. 텍스트 */
+    --text-base: 13px;
+    --text-sm: 12px;
+    --text-md: 16px
+    --text-lg: 20px;
+    --text-xl: 24px;
+    --text-xxl: 28px;
+
+
+    /* 1-4. 아이콘 */
+    --icon-base: 12px;
+    --icon-sm: 10px;
+    --icon-md: 14px;
+    --icon-lg: 18px;
+    --icon-xl: 22px;
+    --icon-xxl: 26px;
+    
+    --i-icon-position-top: 16px;
+    --i-icon-position-right: 12px;
+
+    --x-axis-button-icon: px;
+    --y-axis-button-icon: px;
+    
+    /* 1-5. 컴포넌트 */
+    --border-rounded-corner-width: 2.8px;
+    --contains-intrinsic-height: 24px; 
+}
+
+
+
+
+
+/*
+ * 2. 글꼴 (TYPEFACE)
+================================================================================================*/
+
+
+
+
+/*
+ * 3. 문단 및 텍스트 (PARAGRAPH AND TEXT STYLE)
+================================================================================================*/
+
+
+
+
+/*
+ * 4. 박스 (BOX STYLE)
+================================================================================================*/
+
+
+
+
+/*
+ * 5. 플렉스 (FLEX)
+================================================================================================*/
+
+
+
+
+/*
+ * 6. 버튼 (BUTTON)
+================================================================================================*/
+
+
+
+
+/*
+ * X. 폼(FORM)
+================================================================================================*/

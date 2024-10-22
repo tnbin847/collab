@@ -7,7 +7,7 @@ package com.tnbin.collab.global.config.security;
 
 public class SecurityConstants {
     public static final String[] IGNORED_RESOURCES = {
-            // 누구든 접속 가능한 페이지 URL ||------------------------------------------------------
+            // 누구든 접속 가능한 페이지 URL ||-----------------------------------------------
             "/",
             "/account/**",
             // 정적 리소스 매핑 URL ||------------------------------------------------------
@@ -19,5 +19,8 @@ public class SecurityConstants {
             "/h2-console"
     };
 
-    public static final String[] PUBLICY_URL_PATTERNS = {"/api/v1/account", "/api/v1/account/**"};
+    public static final String[] PUBLICY_URL_PATTERNS = {
+            "/api/v1/account",
+            "/api/v1/account/**"
+    };
 }
