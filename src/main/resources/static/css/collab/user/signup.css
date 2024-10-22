@@ -9,10 +9,20 @@
 
 
 
+.content:has(#addForm) {
+    width: 350px;
+}
 
 
+.has-addons {
+    & > .text-field {
+        margin-right: var(--space-xxxs);
+    }
 
-
+    & > .btn {
+        width: 103px;
+    }
+}
 
 
 

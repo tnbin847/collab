@@ -9,7 +9,9 @@
 
 
 
-
+.content:has(#loginForm) {
+    width: 350px;
+}
 
 
 
